@@ -1,13 +1,24 @@
-Overskrift
+## Analyse af bøger med python
 
-Kort introduktion
+1. [Introduktion](#introduktion)
+2. [Libraries](#libraries)
+3. [Landekoder](#landekoder)
+4. [Landekoder](#Bedst bed)
 
-Libraries brugt
+
+### Introduktion
+Introduktion
+
+### Libraries
+Libraries
+
+### Landekoder
+Landekoder
 
 Find antal af bøger i forskellige landekoder :<br/>
 ![](img/language_codes.png)
 
-lav nyt dataframe kun med engelske landekode bøger
+lav nyt dataframe kun med bøger som har 'eng' landekode.
 ````python
 Kode eksempel
 ````
@@ -27,3 +38,8 @@ Find ud af hvem der har lavet flest bøger ?
 find ud af hvem der har bedste ratings gennemsnit ?
 
 Mere?
+
+Pointers: !
+Heatmap
+coallationer? 
+hvilken rating burde en bog have, hvis lavet af en bestemt forfatter?

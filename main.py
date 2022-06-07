@@ -9,7 +9,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import sklearn
+from sklearn import linear_model
+from sklearn.linear_model import RidgeClassifier
 
 # Import af bøger som skipper hvis et row har fejl/mangel data :
 raw_df = pd.read_csv("books.csv", on_bad_lines='skip')
@@ -26,7 +28,7 @@ plt.show()
 
 # Nyt dataframe kun med Engelske bøger :
 eng_books_df = raw_df[raw_df['language_code'] == 'eng']
-# print(eng_books_df)
+print(eng_books_df)
 
 
 # Top 10 bedst bedømte bøger i datasettet :
@@ -50,3 +52,33 @@ plt.show()
 tolkien_Rowling_rows = eng_books_df["authors"].str.contains("J.R.R. Tolkien|J.K. Rowling")
 tolkien_Rowling_df = eng_books_df[tolkien_Rowling_rows]
 print(tolkien_Rowling_df)
+
+
+# Heatmap
+plt.figure(figsize=(15, 10))
+df_with_drops = eng_books_df.drop(['bookID', 'title', 'authors', 'average_rating', 'isbn', 'isbn13',
+                                   'language_code', '  num_pages', 'publication_date', 'publisher'], axis=1)
+
+sns.heatmap(df_with_drops.corr(), vmin=-1, vmax=1, square=True, annot=True)
+plt.show()
+
+
+# Predict
+predict = "ratings_count"
+
+x = np.array(df_with_drops.drop([predict], axis=1))
+y = np.array(eng_books_df['ratings_count'])
+
+for _ in range(100):
+    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.7)
+
+    #print('{0}, {1}'.format(type(x_train), x_train))
+
+    ridge = linear_model.RidgeClassifier()
+
+    # trains model
+    ridge.fit(x_train, y_train)
+
+    acc = ridge.score(x_test, y_test)
+
+    print('Acc {0}'.format(acc))
