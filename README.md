@@ -10,7 +10,7 @@
    2. [Linear-Model RidgeClassifier](#linear-Model-ridgeClassifier)
    2. [Trænet prediction med 50 procent test data](#trænet-prediction-med-50-procent-test-data)
 7. [Konklusion](#konklusion)
-   1. [Kunne problemet løses bedre/nemmere uden ML](#kunne-problemet-løses-bedre/nemmere-uden-ML)
+   1. [Kunne problemet løses bedre uden ML](#kunne-problemet-løses-bedre-uden-ML)
    2. [Er problemet for komplekst](#er-problemet-for-komplekst)
    3. [Hvordan kunne man forbedre modellen](#hvordan-kunne-man-forbedre-modellen)
 8. [Kilder](#kilder)
@@ -83,7 +83,7 @@ x = np.array(df_with_drops.drop([predict], axis=1))
 y = np.array(eng_books_df['ratings_count'])
 
 for _ in range(100):
-    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.7)
+    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.5)
     ridge = linear_model.RidgeClassifier()
 
     # Trains model
@@ -101,7 +101,7 @@ Ved at træne modellen med 50% test data kan jeg presse min model helt op over 9
 
 ### Konklusion
 
-#### Kunne problemet løses bedre/nemmere uden ML
+#### Kunne problemet løses bedre uden ML
 
 Ud fra diverse grafer jeg er kommet frem til i casen, mener jeg absolut at det er brugbart inden for denne slags data. <br/>
 Dog mener jeg ikke at selve prediction af antallet af bedømmelser ud fra antallet af text baserede anmeldelser giver mening. <br/>
