@@ -3,11 +3,11 @@
 1. [Introduktion](#introduktion)
 2. [Libraries](#libraries)
 3. [Landekoder](#landekoder)
-4. [Top 10 bedst bedømte bøger](#top_10_bedst_bedømte_bøger)
-5. [Data baseret på specifikke forfattere](#data_baseret_på_specifikke_forfattere)
+4. [Top 10 bedst bedømte bøger](#top-10-bedst-bedømte-bøger)
+5. [Data baseret på specifikke forfattere](#data-baseret-på-specifikke-forfattere)
 6. [Prediction](#prediction)
    1. [Heatmap](#heatmap)
-   2. [Linear-Model RidgeClassifier](#linear-Model_ridgeClassifier)
+   2. [Linear-Model RidgeClassifier](#linear-Model-ridgeClassifier)
 7. [Sources](#sources)
 
 
