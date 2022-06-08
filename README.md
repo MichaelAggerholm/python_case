@@ -10,9 +10,9 @@
    2. [Linear-Model RidgeClassifier](#linear-Model-ridgeClassifier)
    2. [Trænet prediction med 50 procent test data](#trænet-prediction-med-50-procent-test-data)
 7. [Konklusion](#konklusion)
-   1. [Kunne problemet løses bedre/nemmere uden ML?](#kunne-problemet-løses-bedre/nemmere-uden-ML?)
-   2. [Er problemet for komplekst?](#er-problemet-for-komplekst?)
-   3. [Hvordan kunne man forbedre modellen?](#hvordan-kunne-man-forbedre-modellen?)
+   1. [Kunne problemet løses bedre/nemmere uden ML](#kunne-problemet-løses-bedre/nemmere-uden-ML)
+   2. [Er problemet for komplekst](#er-problemet-for-komplekst)
+   3. [Hvordan kunne man forbedre modellen](#hvordan-kunne-man-forbedre-modellen)
 8. [Kilder](#kilder)
 
 
@@ -101,7 +101,7 @@ Ved at træne modellen med 50% test data kan jeg presse min model helt op over 9
 
 ### Konklusion
 
-#### Kunne problemet løses bedre/nemmere uden ML?
+#### Kunne problemet løses bedre/nemmere uden ML
 
 Ud fra diverse grafer jeg er kommet frem til i casen, mener jeg absolut at det er brugbart inden for denne slags data. <br/>
 Dog mener jeg ikke at selve prediction af antallet af bedømmelser ud fra antallet af text baserede anmeldelser giver mening. <br/>
@@ -113,13 +113,13 @@ På den måde vil man blandt andet kunne forude som anemdelser oftest opstår so
 af bøger, får flere anmeldelser baseret på målgruppen, alder, køn osv. og hvorvidt den målgruppe hendvender sig oftest negativt eller positivt. <br/>
 Det er der dog langt fra nok data til at anlysere på i dette datasæt.
 
-#### Er problemet for komplekst?
+#### Er problemet for komplekst
 
 Problemerne som jeg har opstillet i mit projekt vil højest sandsynligt vurderes for nemme, da datasettet udelukkende er valgt for at kunnne komme omrking <br/>
 en bred vifte af grafer samt data udtræk. Efter at have været igennem "casen", vil jeg have foretrukket andet valg af dataset, evt. med mere brugbart data <br/>
 inden for prediction eller brug af andre algoritmer, da "collaboration" i dette datasæt ikke egnede sig til særligt mange algortimer, ud fra min overbevisning.
 
-#### Hvordan kunne man forbedre modellen?
+#### Hvordan kunne man forbedre modellen
 
 Udover at træne modellen bedre, eller med mere data for at opnå højere forudsigelsesprocent, er jeg ikke helt klar over hvad der egentlig skal til <br/>
 for at forbedre denne model, det vil sikkert kræve bedre data eller en helt anden model for at komme i mål med et både præcist og brugbart resultat.
