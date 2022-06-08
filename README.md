@@ -10,7 +10,7 @@
    2. [Linear-Model RidgeClassifier](#linear-Model-ridgeClassifier)
    2. [Trænet prediction med 50 procent test data](#trænet-prediction-med-50-procent-test-data)
 7. [Konklusion](#konklusion)
-   1. [Kunne problemet løses bedre/nemmere uden ML](#kunne-problemet-løses-bedre/nemmere-uden-ML)
+   1. [Kunne problemet løses bedre uden ML](#kunne-problemet-løses-bedre-uden-ML)
    2. [Er problemet for komplekst](#er-problemet-for-komplekst)
    3. [Hvordan kunne man forbedre modellen](#hvordan-kunne-man-forbedre-modellen)
 8. [Kilder](#kilder)
@@ -101,7 +101,7 @@ Ved at træne modellen med 50% test data kan jeg presse min model helt op over 9
 
 ### Konklusion
 
-#### Kunne problemet løses bedre/nemmere uden ML
+#### Kunne problemet løses bedre uden ML
 
 Ud fra diverse grafer jeg er kommet frem til i casen, mener jeg absolut at det er brugbart inden for denne slags data. <br/>
 Dog mener jeg ikke at selve prediction af antallet af bedømmelser ud fra antallet af text baserede anmeldelser giver mening. <br/>
