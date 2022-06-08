@@ -4,14 +4,16 @@
 # https://www.kaggle.com/code/snanilim/book-recommendation-engine
 
 # https://www.machinelearningplus.com/pandas/how-to-create-pandas-dataframe-python/
+# https://stackoverflow.com/questions/53911663/what-does-sklearn-ridgeclassifier-do
 
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
+import numpy as np
 import sklearn
+
 from sklearn import linear_model
-from sklearn.linear_model import RidgeClassifier
+
 
 # Import af bøger som skipper hvis et row har fejl/mangel data :
 raw_df = pd.read_csv("books.csv", on_bad_lines='skip')
@@ -27,7 +29,7 @@ plt.show()
 
 
 # Nyt dataframe kun med Engelske bøger :
-eng_books_df = raw_df[raw_df['language_code'] == 'eng']
+eng_books_df = raw_df[(raw_df['language_code'] == 'eng') | (raw_df['language_code'] == 'en-US')]
 print(eng_books_df)
 
 
@@ -71,14 +73,10 @@ y = np.array(eng_books_df['ratings_count'])
 
 for _ in range(100):
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.7)
-
-    #print('{0}, {1}'.format(type(x_train), x_train))
-
     ridge = linear_model.RidgeClassifier()
 
-    # trains model
+    # Trains model
     ridge.fit(x_train, y_train)
 
     acc = ridge.score(x_test, y_test)
-
     print('Acc {0}'.format(acc))
