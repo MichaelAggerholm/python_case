@@ -8,6 +8,7 @@
 6. [Prediction](#prediction)
    1. [Heatmap](#heatmap)
    2. [Linear-Model RidgeClassifier](#linear-Model-ridgeClassifier)
+   2. [Trænet prediction med 50 procent test data](#trænet-prediction-med-50-procent-test-data)
 7. [Sources](#sources)
 
 
@@ -84,6 +85,12 @@ for _ in range(100):
     acc = ridge.score(x_test, y_test)
     print('Acc {0}'.format(acc))
 ```
+
+#### Trænet prediction med 50 procent test data
+
+Ved at træne modellen med 50% test data kan jeg presse min model helt op over 90% prediction success :<br>
+![](img/prediction_trained.png)
+
 
 ### Sources
 En del af de steder jeg har fundet hjælp, inspiration og materiale er linket herunder :<br/><br/>

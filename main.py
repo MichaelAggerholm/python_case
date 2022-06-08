@@ -72,7 +72,7 @@ x = np.array(df_with_drops.drop([predict], axis=1))
 y = np.array(eng_books_df['ratings_count'])
 
 for _ in range(100):
-    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.7)
+    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.5)
     ridge = linear_model.RidgeClassifier()
 
     # Trains model
