@@ -1,4 +1,4 @@
-## Analyse af GoodReads-Books med python
+## Analyse af GoodReads-Books
 
 1. [Introduktion](#introduktion)
 2. [Libraries](#libraries)
